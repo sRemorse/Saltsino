@@ -1,6 +1,6 @@
 import disnake
 from disnake.ext import commands
-import embed
+import embeds
 
 class PingCommand(commands.Cog):
     """Ping command"""
@@ -18,7 +18,7 @@ class PingCommand(commands.Cog):
     async def cooldown_error(self, inter, error):
         
         if isinstance(error, commands.CommandOnCooldown):
-            await inter.response.send_message(embed=embed.createCooldownEmbed(round(error.retry_after)), ephemeral=True, delete_after=error.retry_after)
+            await inter.response.send_message(embed=embeds.createCooldownEmbed(round(error.retry_after)), ephemeral=True, delete_after=error.retry_after)
 
 def setup(bot: commands.Bot):
     bot.add_cog(PingCommand(bot))

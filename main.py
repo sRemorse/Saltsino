@@ -1,6 +1,5 @@
 import disnake
 import os
-import embed
 
 from dotenv import load_dotenv
 from disnake.ext import commands
