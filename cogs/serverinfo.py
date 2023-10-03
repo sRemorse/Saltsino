@@ -15,7 +15,6 @@ class ServerinfoCommand(commands.Cog):
         f'Server name: {inter.guild.name}\nTotal members: {inter.guild.member_count}\nCreated on: {inter.guild.created_at.strftime("%d-%m-%Y")}'
     )
         
-        
     @serverinfo.error
     async def cooldown_error(self, inter, error):
         if isinstance(error, commands.CommandOnCooldown):
