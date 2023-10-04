@@ -1,6 +1,6 @@
 import disnake
 import os
-import embeds
+import embedManager as embeds
 
 from dotenv import load_dotenv
 from disnake.ext import commands
@@ -18,6 +18,7 @@ async def on_ready():
     print(f"Logged in as {bot.user} in {len(bot.guilds)} guilds")
     print(f"Status: {bot.status}")
     print(f"Activity: {bot.activity}")
+    print(f"Loaded: {len(bot.slash_commands)} commands")
 
 # Global cooldown handler
 @bot.event
