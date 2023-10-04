@@ -12,7 +12,7 @@ def createCooldownEmbed(time: float):
     return embed
 
 
-def createErrorEmbed(desc):
+def createErrorEmbed(desc: str):
     """Creates ephmeral error embed with red colour"""
     embed = disnake.Embed(title="Error occured ❌",
     description=desc,
@@ -21,7 +21,7 @@ def createErrorEmbed(desc):
     )
     return embed
 
-def createEmbed(title, desc):
+def createEmbed(title: str, desc: str):
     """Creates a standard embed with light grey colour"""
     embed = disnake.Embed(title=title,
     description=desc,
