@@ -4,7 +4,7 @@ import disnake
     
 def createCooldownEmbed(time: float):
     """Creates ephmeral embed displaying the time left to re-use a command and deletes after the cooldown"""
-    embed = disnake.Embed(title="Comand cooldown 🧊",
+    embed = disnake.Embed(title="🧊 Comand cooldown",
     description=f'Please try again in {time}s',
     color=disnake.Colour.gold(),
     timestamp=datetime.datetime.utcnow()
@@ -14,7 +14,7 @@ def createCooldownEmbed(time: float):
 
 def createErrorEmbed(desc: str):
     """Creates ephmeral error embed with red colour"""
-    embed = disnake.Embed(title="Error occured ❌",
+    embed = disnake.Embed(title="❌ Error occured",
     description=desc,
     color=disnake.Colour.red(),
     timestamp=datetime.datetime.utcnow(),
