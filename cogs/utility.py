@@ -21,7 +21,7 @@ class UtilityCog(commands.Cog):
     async def serverinfo(self, inter: disnake.ApplicationCommandInteraction):
         await inter.response.send_message(embed=embeds.createEmbed(
             "💾 Server Info",
-            f'Server name: {inter.guild.name}\nTotal members: {inter.guild.member_count}\nCreated on: {inter.guild.created_at.strftime("%d-%m-%Y")}')  
+            f'**Server name:** {inter.guild.name}\n**Total members:** {inter.guild.member_count}\n**Created on:** {inter.guild.created_at.strftime("%d-%m-%Y")}')  
     )
         
 def setup(bot: commands.Bot):
