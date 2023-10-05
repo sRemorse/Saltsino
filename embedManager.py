@@ -17,7 +17,7 @@ def createErrorEmbed(desc: str):
     embed = disnake.Embed(title="Error occured ❌",
     description=desc,
     color=disnake.Colour.red(),
-    timestamp=datetime.datetime.now(),
+    timestamp=datetime.datetime.utcnow(),
     )
     return embed
 
@@ -26,7 +26,7 @@ def createEmbed(title: str, desc: str):
     embed = disnake.Embed(title=title,
     description=desc,
     color=disnake.Colour.blue(),
-    timestamp=datetime.datetime.now(),
+    timestamp=datetime.datetime.utcnow(),
     )
     return embed
     
